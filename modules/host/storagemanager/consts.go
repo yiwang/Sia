@@ -39,12 +39,12 @@ var (
 	maximumVirtualSectors = func() int {
 		if build.Release == "dev" {
 			// The testing value is at 35 to provide flexibility. The
-			// development value is at 5 because hitting the virtual sector
+			// development value is at 15 because hitting the virtual sector
 			// limit in a sane development environment is more difficult than
 			// hitting the virtual sector limit in a controlled testing
 			// environment (dev environment doesn't have access to private
 			// methods such as 'addSector'.
-			return 5
+			return 15
 		}
 		if build.Release == "standard" {
 			// Each virtual sector adds about 8 bytes of load to the host
